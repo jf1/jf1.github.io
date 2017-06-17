@@ -79,6 +79,13 @@
     };
 
     //-----custom functions-----
+var type_column = "'Country'";
+var tempWhereClause = [];
+if ( $("#cbType1").is(':checked')) tempWhereClause.push("England");
+if ( $("#cbType2").is(':checked')) tempWhereClause.push("N. Ireland");
+if ( $("#cbType3").is(':checked')) tempWhereClause.push("Scotland");
+if ( $("#cbType4").is(':checked')) tempWhereClause.push("Wales");
+self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
     //-----end of custom functions-----
 
     MapsLib.prototype.submitSearch = function (whereClause, map) {
