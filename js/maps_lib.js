@@ -139,6 +139,7 @@ self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','
                     else if (self.searchRadius >= 805) map.setZoom(15); // 1/2 mile
                     else if (self.searchRadius >= 400) map.setZoom(16); // 1/4 mile
                     else self.map.setZoom(17);
+map.setZoom(6);
 
                     if (self.addrMarkerImage != '') {
                         self.addrMarker = new google.maps.Marker({
